@@ -17,7 +17,8 @@ import com.tads.animalsfriends.modelo.Adocao;
 import java.util.Date;
 
 public class FormularioAdocao extends AppCompatActivity {
-    Adocao adocao;
+    Adocao adocao = new Adocao();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,7 +91,6 @@ public class FormularioAdocao extends AppCompatActivity {
     }
 
     public void salvar(View view){
-        adocao = new Adocao();
 
         RadioButton sim = (RadioButton) findViewById(R.id.sim);
         adocao.setCastrado(sim.isChecked());

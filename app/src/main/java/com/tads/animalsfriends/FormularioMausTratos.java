@@ -12,7 +12,7 @@ import android.widget.EditText;
 import com.tads.animalsfriends.modelo.MausTratos;
 
 public class FormularioMausTratos extends AppCompatActivity {
-    MausTratos mausTratos;
+    MausTratos mausTratos = new MausTratos();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,9 +56,7 @@ public class FormularioMausTratos extends AppCompatActivity {
     }
 
     public void salvar(View view){
-        mausTratos = new MausTratos();
 
-        mausTratos = new MausTratos();
         mausTratos.setCidade(((EditText) findViewById(R.id.et_cidade)).getText().toString());
         mausTratos.setDescricao(((EditText) findViewById(R.id.et_descricao)).getText().toString());
         mausTratos.setTelefone(((EditText) findViewById(R.id.et_telefone)).getText().toString());
@@ -66,7 +64,12 @@ public class FormularioMausTratos extends AppCompatActivity {
         mausTratos.setLongitude(((EditText) findViewById(R.id.et_longitude)).getText().toString());
 
         mausTratos.save();
+        enviarDados();
         finish();
+    }
+
+    private void enviarDados(){
+
     }
 
     public void cancelar(View view){
