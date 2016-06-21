@@ -104,6 +104,21 @@
                     android:onClick="cancelar"/>
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bt_excluir"
+                    android:id="@+id/bt_excluir"
+                    android:onClick="excluir"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 

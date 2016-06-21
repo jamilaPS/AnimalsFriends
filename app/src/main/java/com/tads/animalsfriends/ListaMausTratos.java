@@ -63,6 +63,13 @@ public class ListaMausTratos extends AppCompatActivity implements AdapterView.On
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Long idMausTratos = adapterMausTratos.getItemId(position);
+        Bundle bundle = new Bundle();
+        bundle.putLong("idMausTratos", idMausTratos);
+
+        Intent intent = new Intent(getApplicationContext(), FormularioMausTratos.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
 }

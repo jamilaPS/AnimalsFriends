@@ -12,6 +12,7 @@
     <string name="bt_mausTratos">Maus Tratos</string>
     <string name="bt_salvar">Salvar</string>
     <string name="bt_cancelar">Cancelar</string>
+    <string name="bt_excluir">Excluir</string>
 
     <string name="nomeAnimal">Nome do Animal</string>
     <string name="cpf">CPF</string>

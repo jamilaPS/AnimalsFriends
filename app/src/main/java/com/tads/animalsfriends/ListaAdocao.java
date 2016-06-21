@@ -64,6 +64,12 @@ public class ListaAdocao extends AppCompatActivity implements AdapterView.OnItem
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        Long idAdocao = adapterAdocao.getItemId(position);
+        Bundle bundle = new Bundle();
+        bundle.putLong("idAdocao", idAdocao);
 
+        Intent intent = new Intent(getApplicationContext(), FormularioAdocao.class);
+        intent.putExtras(bundle);
+        startActivity(intent);
     }
 }
