@@ -56,12 +56,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void chamarAdocao(View view){
-        Intent intent = new Intent(getApplicationContext(), Adocao.class);
+        Intent intent = new Intent(getApplicationContext(), ListaAdocao.class);
         startActivity(intent);
     }
 
     public void chamarMausTratos(View view){
-        Intent intent = new Intent(getApplicationContext(), MausTratos.class);
+        Intent intent = new Intent(getApplicationContext(), ListaMausTratos.class);
         startActivity(intent);
     }
 }

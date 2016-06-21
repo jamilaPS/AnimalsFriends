@@ -1,5 +1,6 @@
 package com.tads.animalsfriends;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -26,6 +27,11 @@ public class ListaAdocao extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public void chamarCadastro(View view){
+        Intent intent = new Intent(getApplicationContext(), FormularioAdocao.class);
+        startActivity(intent);
     }
 
 }

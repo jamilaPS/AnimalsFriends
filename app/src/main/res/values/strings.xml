@@ -1,13 +1,38 @@
 <resources>
-    <string name="app_name">AnimalsFriends</string>
+    <string name="app_name">Animals Friends</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_lista_adocao">ListaAdocao</string>
-    <string name="title_activity_formulario_adocao">FormularioAdocao</string>
-    <string name="title_activity_lista_maus_tratos">ListaMausTratos</string>
-    <string name="title_activity_formulario_maus_tratos">FormularioMausTratos</string>
+    <string name="title_activity_lista_adocao">Adoção</string>
+    <string name="title_activity_formulario_adocao">Cadastrar Adoção</string>
+    <string name="title_activity_lista_maus_tratos">Maus Tratos</string>
+    <string name="title_activity_formulario_maus_tratos">Cadastrar Maus Tratos</string>
 
     <string name="bt_cadastro_adocao">Cadastrar Adoção</string>
     <string name="bt_cadastro_mausTratos">Cadastrar Maus Tratos</string>
     <string name="bt_adocao">Adoção</string>
     <string name="bt_mausTratos">Maus Tratos</string>
+    <string name="bt_salvar">Salvar</string>
+    <string name="bt_cancelar">Cancelar</string>
+
+    <string name="nomeAnimal">Nome do Animal</string>
+    <string name="cpf">CPF</string>
+    <string name="descricao">Descrição</string>
+    <string name="nomeAnunciante">Nome do Anunciante</string>
+    <string name="telefone">Telefone</string>
+    <string name="especie">Espécie</string>
+    <string name="sexo">Sexo</string>
+    <string name="peso">Peso</string>
+    <string name="idade">Idade</string>
+    <string name="pelagem">Pelagem</string>
+    <string name="raca">Raça</string>
+    <string name="castrado">É castrado</string>
+    <string name="linkVideo">Link para vídeo</string>
+    <string name="cidade">Cidade</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+
+    <string name="sim">Sim</string>
+    <string name="nao">Não</string>
+    <string name="macho">Macho</string>
+    <string name="femea">Fêmea</string>
+
 </resources>

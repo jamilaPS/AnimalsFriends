@@ -6,6 +6,9 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
+
+import com.tads.animalsfriends.modelo.MausTratos;
 
 public class FormularioMausTratos extends AppCompatActivity {
 
@@ -24,6 +27,25 @@ public class FormularioMausTratos extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+    }
+
+    public void salvar(View view){
+        MausTratos mausTratos = new MausTratos();
+
+        mausTratos = new MausTratos();
+        mausTratos.setCidade(((EditText) findViewById(R.id.et_cidade)).getText().toString());
+        mausTratos.setDescricao(((EditText) findViewById(R.id.et_descricao)).getText().toString());
+        mausTratos.setTelefone(((EditText) findViewById(R.id.et_telefone)).getText().toString());
+        mausTratos.setLatitude(((EditText) findViewById(R.id.et_latitude)).getText().toString());
+        mausTratos.setLongitude(((EditText) findViewById(R.id.et_longitude)).getText().toString());
+
+        mausTratos.save();
+        finish();
+    }
+
+    public void cancelar(View view){
+        finish();
     }
 
 }
