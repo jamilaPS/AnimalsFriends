@@ -7,10 +7,18 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
 import com.tads.animalsfriends.R;
+import com.tads.animalsfriends.adapter.AdapterAdocao;
+import com.tads.animalsfriends.modelo.Adocao;
 
-public class ListaAdocao extends AppCompatActivity {
+import java.util.List;
+
+public class ListaAdocao extends AppCompatActivity implements AdapterView.OnItemClickListener{
+    private AdapterAdocao adapterAdocao;
+    private ListView listAdocao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +35,26 @@ public class ListaAdocao extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        listAdocao = (ListView) findViewById(R.id.listAdocao);
+        preencherListView();
+        listAdocao.setOnItemClickListener(this);
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        preencherListView();
+    }
+
+    private void preencherListView(){
+        adapterAdocao = new AdapterAdocao(this, getListaAdocao());
+        listAdocao.setAdapter(adapterAdocao);
+    }
+
+    private List<Adocao> getListaAdocao(){
+        List<Adocao> la = Adocao.listAll(Adocao.class);
+        return la;
     }
 
     public void chamarCadastro(View view){
@@ -34,4 +62,8 @@ public class ListaAdocao extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+    }
 }

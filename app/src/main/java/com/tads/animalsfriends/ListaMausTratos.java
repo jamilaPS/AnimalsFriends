@@ -7,8 +7,17 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
 
-public class ListaMausTratos extends AppCompatActivity {
+import com.tads.animalsfriends.adapter.AdapterMausTratos;
+import com.tads.animalsfriends.modelo.MausTratos;
+
+import java.util.List;
+
+public class ListaMausTratos extends AppCompatActivity implements AdapterView.OnItemClickListener{
+    private AdapterMausTratos adapterMausTratos;
+    private ListView listMausTratos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +34,26 @@ public class ListaMausTratos extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        listMausTratos = (ListView) findViewById(R.id.listMausTratos);
+        preencherListView();
+        listMausTratos.setOnItemClickListener(this);
+    }
+
+    @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        preencherListView();
+    }
+
+    private void preencherListView(){
+        adapterMausTratos = new AdapterMausTratos(this, getListaMausTratos());
+        listMausTratos.setAdapter(adapterMausTratos);
+    }
+
+    private List<MausTratos> getListaMausTratos(){
+        List<MausTratos> la = MausTratos.listAll(MausTratos.class);
+        return la;
     }
 
     public void chamarCadastro(View view){
@@ -32,4 +61,8 @@ public class ListaMausTratos extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+    }
 }
