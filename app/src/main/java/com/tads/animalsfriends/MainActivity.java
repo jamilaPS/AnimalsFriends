@@ -1,5 +1,6 @@
 package com.tads.animalsfriends;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,6 +9,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.tads.animalsfriends.R;
+import com.tads.animalsfriends.modelo.Adocao;
+import com.tads.animalsfriends.modelo.MausTratos;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +53,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void chamarAdocao(View view){
+        Intent intent = new Intent(getApplicationContext(), Adocao.class);
+        startActivity(intent);
+    }
+
+    public void chamarMausTratos(View view){
+        Intent intent = new Intent(getApplicationContext(), MausTratos.class);
+        startActivity(intent);
     }
 }
